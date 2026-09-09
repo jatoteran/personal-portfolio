@@ -1,214 +1,445 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
-    <head>
+<head>
+    <meta charset="UTF-8">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-        <title>My Portfolio</title>
+    <meta
+        name="description"
+        content="Jose Teran's web development portfolio featuring real websites and projects built with HTML, CSS, JavaScript and modern development tools."
+    >
 
-        <link rel="stylesheet" href="style.css">
+    <title>Jose Teran | Web Development</title>
 
-    </head>
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
 
-    <body>
 
-        <header>
+<body>
 
-            <div class="header-content container">
+    <!-- HEADER -->
 
-            <h1>Jose's Portfolio</h1>
+    <header>
 
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav> 
+        <div class="header-content container">
+
+            <a
+                href="#home"
+                class="site-name"
+            >
+                Jose Teran
+            </a>
+
+            <nav aria-label="Main navigation">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#projects">
+                    Projects
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section
+            id="home"
+            class="hero"
+        >
+
+            <div class="hero-content container">
+
+                <div class="hero-text">
+
+                    <p class="hero-label">
+                        JOSE TERAN · WEB DEVELOPMENT
+                    </p>
+
+                    <h1>
+                        I build websites while learning how the web really works.
+                    </h1>
+
+                    <p class="hero-description">
+                        I'm learning development by designing, coding
+                        and publishing real projects from start to finish.
+                    </p>
+
+                    <button
+                        id="projects-button"
+                        type="button"
+                    >
+                        View my work
+                    </button>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <img
+                        src="IMAGES/jose-teran.webp"
+                        alt="Portrait of Jose Teran"
+                        class="profile-image"
+                    >
+
+                </div>
 
             </div>
 
-        </header>
+        </section>
 
-        <main>
-            <section id="home" class="hero">
 
-    <div class="hero-content container">
+        <!-- PROJECTS -->
 
-        <div class="hero-text">
-
-            <p class="hero-label">WEB DEVELOPER IN TRAINING</p>
-
-            <h2>Building real projects one step at a time.</h2>
-
-            <p>
-                I'm learning web development by creating real websites and applications.
-            </p>
-
-            <button id="projects-button">View my projects</button>
-
-            <p id="form-status"></p>
-
-        </div>
-
-        <img
-            src="IMAGES/byron.webp"
-            alt="An image for my web site"
-            class="profile-image"
+        <section
+            id="projects"
+            class="projects-section"
         >
 
-    </div>
+            <div class="container">
 
-</section>
+                <div class="section-heading">
 
-            <section id="about">
+                    <p class="section-label">
+                        SELECTED WORK
+                    </p>
 
-    <div class="about-content container">
+                    <h2>
+                        Projects I've built
+                    </h2>
 
-        <div class="about-text">
-            <h2>About Me</h2>
+                    <p>
+                        Real projects created while learning
+                        design, development and deployment.
+                    </p>
 
-            <p>
-                Im learning how to build websites using HTML, CSS and other technologies.
-            </p>
-        </div>
-
-        <div class="skills">
-            <h3>Skills I'm Learning</h3>
-
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>React</li>
-                <li>Git</li>
-                <li>AI</li>
-            </ul>
-        </div>
-
-    </div>
-
-</section>
-
-            <section id="projects">
-
-    <h2>My Projects</h2>
-
-    <div class="projects-grid">
-
-        <div class="project-card">
-
-    <p class="project-status in-progress">IN PROGRESS</p>
-
-    <h3>Personal Portfolio</h3>
-
-    <p>
-        My personal portfolio built while learning modern web development.
-    </p>
-
-    <div class="project-tech">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-    </div>
-
-</div>
-
-        <div class="project-card">
-
-    <p class="project-status planned">PLANNED</p>
-
-    <h3>Business Website</h3>
-
-    <p>
-        A professional responsive website built for a real business.
-    </p>
-
-    <div class="project-tech">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-    </div>
-
-</div>
-
-        <div class="project-card">
-
-    <p class="project-status planned">PLANNED</p>
-
-    <h3>JavaScript Application</h3>
-
-    <p>
-        An interactive web application focused on JavaScript functionality.
-    </p>
-
-    <div class="project-tech">
-        <span>JavaScript</span>
-        <span>HTML</span>
-        <span>CSS</span>
-    </div>
-
-</div>
-
-    </div>
-
-</section>
-
-            <section id="contact" class="contact-section">
-
-    <div class="contact-content container">
-
-        <div class="contact-info">
-            <h2>Contact Me</h2>
-
-            <p>
-                If you want to contact me, send me a message using this form.
-            </p>
-        </div>
-
-                <form class="contact-form" id="contact-form">
-
-                <div class="form-group">
-                <label>Name</label>
-                <input type="text" id="name">
                 </div>
 
-                <div class="form-group">
-                <label>Email</label>
-                <input type="email" id="email">
+
+                <div class="projects-grid">
+
+                    <!-- SUBLIME DIP -->
+
+                    <article class="project-card">
+
+                        <div class="project-meta">
+
+                            <span>
+                                01
+                            </span>
+
+                            <span class="project-status live">
+                                LIVE
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Sublime Dip
+                        </h3>
+
+                        <p>
+                            A responsive website created for a real artisan
+                            food business, from initial design to deployment.
+                        </p>
+
+                        <div class="project-tech">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Git</span>
+                            <span>Cloudflare</span>
+
+                        </div>
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://sublime-dip.pages.dev"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Live site
+                            </a>
+
+                            <a
+                                href="https://github.com/jatoteran/sublime-dip"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PERSONAL PORTFOLIO -->
+
+                    <article class="project-card">
+
+                        <div class="project-meta">
+
+                            <span>
+                                02
+                            </span>
+
+                            <span class="project-status live">
+                                LIVE
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Personal Portfolio
+                        </h3>
+
+                        <p>
+                            My personal space for documenting what I'm learning
+                            and presenting the projects I build along the way.
+                        </p>
+
+                        <div class="project-tech">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Vercel</span>
+
+                        </div>
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://personal-portfolio-jatoteran.vercel.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Live site
+                            </a>
+
+                            <a
+                                href="https://github.com/jatoteran/personal-portfolio"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </article>
+
                 </div>
 
-                <div class="form-group">
-                <label>Message</label>
-                <textarea id="message" placeholder="Write your message"></textarea>
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section
+            id="about"
+            class="about-section"
+        >
+
+            <div class="about-content container">
+
+                <div class="about-text">
+
+                    <p class="section-label">
+                        ABOUT
+                    </p>
+
+                    <h2>
+                        Learning by building.
+                    </h2>
+
+                    <p>
+                        I'm learning web development by building real projects
+                        instead of only following tutorials.
+                    </p>
+
+                    <p>
+                        My current focus is creating clean, responsive websites,
+                        understanding JavaScript and learning the tools used to
+                        take a project from an idea to a live website.
+                    </p>
+
                 </div>
 
-                <div class="form-group>
-                <label>Message</label>
-                <textarea placeholder="Write here your Message"></textarea>
+
+                <div class="skills">
+
+                    <p class="section-label">
+                        CURRENT TOOLKIT
+                    </p>
+
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Design</li>
+                        <li>Git &amp; GitHub</li>
+                        <li>Deployment</li>
+                    </ul>
+
                 </div>
 
-                <button type="submit">Send Message</button>
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section
+            id="contact"
+            class="contact-section"
+        >
+
+            <div class="contact-content container">
+
+                <div class="contact-info">
+
+                    <p class="section-label">
+                        CONTACT
+                    </p>
+
+                    <h2>
+                        Let's talk.
+                    </h2>
+
+                    <p>
+                        Have a project, idea or question?
+                        Send me a message.
+                    </p>
+
+                </div>
+
+
+                <form
+                    class="contact-form"
+                    id="contact-form"
+                >
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Write your message"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button type="submit">
+                        Send message
+                    </button>
+
+                    <p
+                        id="form-status"
+                        aria-live="polite"
+                    ></p>
 
                 </form>
 
-    </div>
-
-        </main>
-
-        <footer>
-            <div class="footer-content container">
-
-             <p>Built during my Vibe Coding Journey.</p>
-
-             <p>2026</p>
-
             </div>
-        </footer>
 
-        <script src="script.js"></script>
+        </section>
 
-    </body>
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content container">
+
+            <p>
+                Jose Teran · Web Development
+            </p>
+
+            <p>
+                © 2026
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
 </html>
