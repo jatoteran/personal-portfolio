@@ -1,6 +1,3 @@
-console.log("JavaScript is connected!");
-
-
 // ==========================
 // PROJECTS BUTTON
 // ==========================
@@ -8,37 +5,14 @@ console.log("JavaScript is connected!");
 const projectsButton = document.querySelector("#projects-button");
 const projectsSection = document.querySelector("#projects");
 
-projectsButton.addEventListener("click", function () {
-    projectsSection.scrollIntoView({
-        behavior: "smooth"
-    });
-
-    projectsButton.textContent = "Projects below ↓";
-});
-
-
-// ==========================
-// NAVIGATION
-// ==========================
-
-const navLinks = document.querySelectorAll("nav a");
-
-navLinks.forEach(function (link) {
-
-    link.addEventListener("click", function (event) {
-
-        event.preventDefault();
-
-        const targetId = link.getAttribute("href");
-        const targetSection = document.querySelector(targetId);
-
-        targetSection.scrollIntoView({
-            behavior: "smooth"
+if (projectsButton && projectsSection) {
+    projectsButton.addEventListener("click", function () {
+        projectsSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
         });
-
     });
-
-});
+}
 
 
 // ==========================
@@ -50,39 +24,70 @@ const contactForm = document.querySelector("#contact-form");
 const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email");
 const messageInput = document.querySelector("#message");
-
 const formStatus = document.querySelector("#form-status");
 
-contactForm.addEventListener("submit", function (event) {
+if (
+    contactForm &&
+    nameInput &&
+    emailInput &&
+    messageInput &&
+    formStatus
+) {
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    event.preventDefault();
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const message = messageInput.value.trim();
 
-    const name = nameInput.value.trim();
-    const email = emailInput.value.trim();
-    const message = messageInput.value.trim();
+        formStatus.classList.remove(
+            "form-error",
+            "form-success"
+        );
 
-    if (name === "" || email === "" || message === "") {
 
-        formStatus.textContent = "Please complete all fields.";
+        // EMPTY FIELDS
 
-        formStatus.classList.remove("form-success");
-        formStatus.classList.add("form-error");
+        if (!name || !email || !message) {
+            formStatus.textContent =
+                "Please complete all fields.";
 
-        return;
-    }
+            formStatus.classList.add("form-error");
 
-    formStatus.textContent = "Message ready to send!";
+            return;
+        }
 
-    formStatus.classList.remove("form-error");
-    formStatus.classList.add("form-success");
 
-    contactForm.reset();
+        // EMAIL VALIDATION
 
-    setTimeout(function () {
-        formStatus.textContent = "";
-    }, 3000);
+        if (!emailInput.validity.valid) {
+            formStatus.textContent =
+                "Please enter a valid email address.";
 
-});
+            formStatus.classList.add("form-error");
+
+            return;
+        }
+
+
+        // TEMPORARY FRONT-END MESSAGE
+
+        formStatus.textContent =
+            "Thanks! Contact form delivery will be connected soon.";
+
+        formStatus.classList.add("form-success");
+
+
+        setTimeout(function () {
+            formStatus.textContent = "";
+
+            formStatus.classList.remove(
+                "form-error",
+                "form-success"
+            );
+        }, 5000);
+    });
+}
 
 
 

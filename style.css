@@ -283,6 +283,49 @@ nav a:hover {
     border-left: 1px solid var(--border);
 }
 
+
+/* PROJECT PREVIEWS */
+
+.project-preview {
+    display: block;
+
+    width: 100%;
+
+    margin-bottom: 36px;
+
+    overflow: hidden;
+
+    background-color: var(--surface);
+
+    border: 1px solid var(--border);
+
+    text-decoration: none;
+}
+
+.project-preview img {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: top center;
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+.project-preview:hover img {
+    transform: scale(1.02);
+
+    filter: brightness(0.96);
+}
+
+
+/* PROJECT INFORMATION */
+
 .project-meta {
     display: flex;
     align-items: center;
@@ -594,6 +637,9 @@ footer {
         aspect-ratio: 16 / 10;
     }
 
+
+    /* PROJECTS */
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
@@ -607,6 +653,9 @@ footer {
 
         border-left: none;
     }
+
+
+    /* ABOUT + CONTACT */
 
     .about-content,
     .contact-content {
@@ -718,6 +767,14 @@ footer {
 
     .project-card {
         padding: 34px 0;
+    }
+
+    .project-preview {
+        margin-bottom: 26px;
+    }
+
+    .project-preview img {
+        aspect-ratio: 16 / 10;
     }
 
     .project-meta {
