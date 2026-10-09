@@ -391,6 +391,7 @@ nav a:hover {
 
 .project-links {
     display: flex;
+    flex-wrap: wrap;
 
     gap: 24px;
 
